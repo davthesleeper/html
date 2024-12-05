@@ -1,0 +1,21 @@
+  #mapId {
+    height: 100%; /* Ajusta el tamaño del mapa */
+    z-index: 0; /* Asegura que el mapa se renderice correctamente */
+  }
+  
+  /* Personaliza los iconos del marcador */
+  .leaflet-popup-content-wrapper {
+    background: #2a2d3e; /* Fondo del popup acorde al tema */
+    color: #d1d5db; /* Texto claro */
+    border-radius: 8px;
+  }
+
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+    --color: white;
+  }
+  
+  ion-input {
+    margin: 0 16px;
+  }
+  

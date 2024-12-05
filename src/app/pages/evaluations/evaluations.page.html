@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Evaluaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Muestra el indicador de carga si está cargando -->
+  <ion-spinner *ngIf="isLoading" class="ion-padding"></ion-spinner>
+
+  <!-- Lista los lugares si están disponibles -->
+  <ion-list *ngIf="!isLoading && places.length > 0">
+    <ion-item *ngFor="let place of places">
+      <ion-thumbnail slot="start" *ngIf="place.photo">
+        <img [src]="place.photo" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ place.name }}</h2>
+        <p>{{ place.comment }}</p>
+        <small>Lat: {{ place.latitude }}, Lng: {{ place.longitude }}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje si no hay lugares -->
+  <p *ngIf="!isLoading && places.length === 0" class="ion-padding">
+    No hay lugares disponibles.
+  </p>
+</ion-content>

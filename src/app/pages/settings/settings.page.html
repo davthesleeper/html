@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="bg-gradient-to-r from-gray-800 via-gray-900 to-black">
+    <ion-title class="text-white text-center text-2xl font-semibold">
+      Personaliza tu Tema
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-gray-900 text-gray-200">
+  <div class="text-center py-8">
+    <h1 class="text-3xl font-bold text-indigo-400">Personaliza tu Tema</h1>
+    <p class="text-gray-400 mt-4 text-lg">
+      Cambia el diseño según tus preferencias.
+    </p>
+  </div>
+
+  <div class="px-6">
+    <h2 class="text-lg font-semibold text-gray-300 mt-4">Seleccionar Tema</h2>
+    <ion-item>
+      <ion-label>Tema Claro</ion-label>
+      <ion-radio-group [(ngModel)]="selectedTheme" (ionChange)="applyTheme()">
+        <ion-radio slot="start" value="light"></ion-radio>
+      </ion-radio-group>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tema Intermedio</ion-label>
+      <ion-radio-group [(ngModel)]="selectedTheme" (ionChange)="applyTheme()">
+        <ion-radio slot="start" value="midnight"></ion-radio>
+      </ion-radio-group>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tema Oscuro</ion-label>
+      <ion-radio-group [(ngModel)]="selectedTheme" (ionChange)="applyTheme()">
+        <ion-radio slot="start" value="dark"></ion-radio>
+      </ion-radio-group>
+    </ion-item>
+  </div>
+</ion-content>

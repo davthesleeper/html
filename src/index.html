@@ -5,22 +5,40 @@
   <meta charset="utf-8" />
   <title>Ionic App</title>
 
+  <!-- Base URL -->
   <base href="/" />
 
-  <meta name="color-scheme" content="light dark" />
+  <!-- Responsive and color scheme -->
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="color-scheme" content="light dark" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
 
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
-  <!-- add to homescreen for ios -->
+  <!-- Apple-specific meta tags -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png" />
+
+  <!-- Progressive Web App -->
+  <link rel="manifest" href="assets/manifest.json" />
+
+  <!-- SEO -->
+  <meta name="description" content="An amazing Ionic application" />
+  <meta name="keywords" content="Ionic, Angular, PWA, App" />
+  <meta name="author" content="Your Name" />
+
+  <!-- Leaflet Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 </head>
 
 <body>
   <app-root></app-root>
+
+  <!-- Leaflet Script -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 </body>
 
 </html>

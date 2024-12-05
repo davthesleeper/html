@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar class="bg-gray-800">
+    <ion-title class="text-gray-200 text-center text-lg font-semibold">
+      Explora Nuestra App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-gray-900 text-gray-300">
+  <div class="text-center py-6">
+    <h1 class="text-3xl font-bold text-gray-100">
+      ¡Bienvenido!
+    </h1>
+    <p class="text-gray-400 mt-2 text-sm">
+      Navega por las opciones disponibles:
+    </p>
+  </div>
+
+  <ion-list class="mt-4 space-y-3">
+    <ion-item
+      button
+      routerLink="/register"
+      class="hover:bg-gray-700 bg-gray-800 text-gray-100 text-base rounded-lg mx-4 py-3 flex items-center transition hover:shadow-md"
+    >
+      <ion-icon name="person-add" slot="start" class="text-lg text-indigo-400 mr-2"></ion-icon>
+      Registro
+    </ion-item>
+
+    <ion-item
+      button
+      routerLink="/login"
+      class="hover:bg-gray-700 bg-gray-800 text-gray-100 text-base rounded-lg mx-4 py-3 flex items-center transition hover:shadow-md"
+    >
+      <ion-icon name="log-in" slot="start" class="text-lg text-indigo-400 mr-2"></ion-icon>
+      Login
+    </ion-item>
+
+    <ion-item
+      button
+      routerLink="/profile"
+      class="hover:bg-gray-700 bg-gray-800 text-gray-100 text-base rounded-lg mx-4 py-3 flex items-center transition hover:shadow-md"
+    >
+      <ion-icon name="person-circle" slot="start" class="text-lg text-indigo-400 mr-2"></ion-icon>
+      Perfil
+    </ion-item>
+
+    <ion-item
+      button
+      routerLink="/evaluations"
+      class="hover:bg-gray-700 bg-gray-800 text-gray-100 text-base rounded-lg mx-4 py-3 flex items-center transition hover:shadow-md"
+    >
+      <ion-icon name="star" slot="start" class="text-lg text-indigo-400 mr-2"></ion-icon>
+      Evaluaciones
+    </ion-item>
+
+    <ion-item
+      button
+      routerLink="/map"
+      class="hover:bg-gray-700 bg-gray-800 text-gray-100 text-base rounded-lg mx-4 py-3 flex items-center transition hover:shadow-md"
+    >
+      <ion-icon name="map" slot="start" class="text-lg text-indigo-400 mr-2"></ion-icon>
+      Mapa
+    </ion-item>
+
+    <ion-item
+      button
+      routerLink="/qr"
+      class="hover:bg-gray-700 bg-gray-800 text-gray-100 text-base rounded-lg mx-4 py-3 flex items-center transition hover:shadow-md"
+    >
+      <ion-icon name="qr-code" slot="start" class="text-lg text-indigo-400 mr-2"></ion-icon>
+      QR Scanner
+    </ion-item>
+
+    <ion-item
+      button
+      routerLink="/settings"
+      class="hover:bg-gray-700 bg-gray-800 text-gray-100 text-base rounded-lg mx-4 py-3 flex items-center transition hover:shadow-md"
+    >
+      <ion-icon name="settings" slot="start" class="text-lg text-indigo-400 mr-2"></ion-icon>
+      Configuración
+    </ion-item>
+  </ion-list>
+</ion-content>
+

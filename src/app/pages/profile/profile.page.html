@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-padding">
+    <h2 class="text-2xl font-bold text-gray-800">¡Hola, {{ userName || 'Usuario' }}!</h2>
+    <p class="text-gray-600">Aquí puedes ver tu información y gestionar tu cuenta.</p>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Información del Usuario</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Email:</strong> {{ userEmail || 'No disponible' }}</p>
+        <p><strong>Nombre:</strong> {{ userName || 'No disponible' }}</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-button expand="block" color="danger" (click)="logout()">Cerrar Sesión</ion-button>
+    <ion-button expand="block" color="medium" routerLink="/home" class="mt-2">Volver al Inicio</ion-button>
+  </div>
+</ion-content>

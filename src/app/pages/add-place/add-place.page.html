@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Lugar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Formulario para agregar lugar -->
+  <ion-item>
+    <ion-label position="stacked">Nombre del lugar</ion-label>
+    <ion-input [(ngModel)]="placeName" placeholder="Ingresa el nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Latitud</ion-label>
+    <ion-input [(ngModel)]="latitude" readonly></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Longitud</ion-label>
+    <ion-input [(ngModel)]="longitude" readonly></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Comentario</ion-label>
+    <ion-textarea [(ngModel)]="comment" placeholder="Escribe un comentario"></ion-textarea>
+  </ion-item>
+
+  <!-- Botón para subir foto -->
+  <ion-item>
+    <ion-label position="stacked">Foto</ion-label>
+    <ion-button expand="block" (click)="uploadPhoto()">Subir Foto</ion-button>
+    <div *ngIf="photo" class="photo-preview">
+      <img [src]="photo" alt="Vista previa" />
+    </div>
+  </ion-item>
+
+  <!-- Botón para guardar -->
+  <ion-button expand="block" (click)="savePlace()">Guardar Lugar</ion-button>
+</ion-content>

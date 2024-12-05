@@ -1,37 +1,81 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-/* Core CSS required for Ionic components to work properly */
+/* Ionic CSS */
 @import "@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
 @import "@ionic/angular/css/display.css";
-
-/* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+/* Colores globales personalizados */
+:root {
+  --ion-color-primary: #4a90e2;
+  --ion-color-secondary: #50e3c2;
+  --ion-color-success: #34d399;
+  --ion-color-warning: #f59e0b;
+  --ion-color-danger: #ef4444;
+}
+
+/* Estilos globales para el cuerpo */
+body {
+  @apply bg-gray-100 text-gray-800; /* Fondo claro y texto oscuro */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+/* Temas personalizados */
+
+/* Tema claro */
+[data-theme="light"] {
+  --ion-background-color: #f8fafc;
+  --ion-text-color: #1e293b;
+  --ion-item-background: #ffffff;
+  --ion-toolbar-background: #e2e8f0;
+}
+
+/* Tema oscuro */
+[data-theme="dark"] {
+  --ion-background-color: #0f172a;
+  --ion-text-color: #f8fafc;
+  --ion-item-background: #1e293b;
+  --ion-toolbar-background: #4b5563;
+}
+
+/* Tema intermedio (Midnight) */
+[data-theme="midnight"] {
+  --ion-background-color: #1c1f2e;
+  --ion-text-color: #d1d5db;
+  --ion-item-background: #2a2d3e;
+  --ion-toolbar-background: #242636;
+  --ion-color-primary: #646cff;
+  --ion-color-secondary: #5a8bfc;
+}
+
+/* Tema personalizado */
+[data-theme="custom"] {
+  --ion-background-color: #282c35;
+  --ion-text-color: #ffffff;
+  --ion-item-background: #ffd700;
+  --ion-toolbar-background: #ff6347;
+}
+
+/* Animaciones globales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
